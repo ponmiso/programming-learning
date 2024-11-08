@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45600CB72CDD9C5B00D2750E /* TCA in Frameworks */ = {isa = PBXBuildFile; productRef = 45600CB62CDD9C5B00D2750E /* TCA */; };
 		45E84AE72C7968B000199146 /* programming_learning_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AE62C7968B000199146 /* programming_learning_iosApp.swift */; };
 		45E84AE92C7968B000199146 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AE82C7968B000199146 /* ContentView.swift */; };
 		45E84AEB2C7968B000199146 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AEA2C7968B000199146 /* Item.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		457C38B02CDD9C14001AF8F7 /* TCA */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TCA; sourceTree = "<group>"; };
 		45E84AE32C7968B000199146 /* programming-learning-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "programming-learning-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E84AE62C7968B000199146 /* programming_learning_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programming_learning_iosApp.swift; sourceTree = "<group>"; };
 		45E84AE82C7968B000199146 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45600CB72CDD9C5B00D2750E /* TCA in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,12 +76,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45600CB52CDD9C5B00D2750E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		45E84ADA2C7968B000199146 = {
 			isa = PBXGroup;
 			children = (
 				45E84AE52C7968B000199146 /* programming-learning-ios */,
 				45E84AF82C7968B200199146 /* programming-learning-iosTests */,
+				457C38B02CDD9C14001AF8F7 /* TCA */,
 				45E84B022C7968B200199146 /* programming-learning-iosUITests */,
+				45600CB52CDD9C5B00D2750E /* Frameworks */,
 				45E84AE42C7968B000199146 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -592,6 +604,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45600CB62CDD9C5B00D2750E /* TCA */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TCA;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 45E84ADB2C7968B000199146 /* Project object */;
 }
