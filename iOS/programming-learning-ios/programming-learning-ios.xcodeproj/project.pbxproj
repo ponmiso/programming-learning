@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		450589EA2CF9695C0044FBA4 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 450589E92CF9695C0044FBA4 /* API */; };
 		451762122CEC8AF100CE2574 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 451762112CEC8AF100CE2574 /* ComposableArchitecture */; };
 		4517621D2CEC8B5600CE2574 /* GitHubReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451762182CEC8B5600CE2574 /* GitHubReducer.swift */; };
 		4517621E2CEC8B5600CE2574 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517621A2CEC8B5600CE2574 /* TopView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		450589E82CF969470044FBA4 /* Package */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Package; sourceTree = "<group>"; };
 		451762182CEC8B5600CE2574 /* GitHubReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReducer.swift; sourceTree = "<group>"; };
 		4517621A2CEC8B5600CE2574 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		45E84AE32C7968B000199146 /* programming-learning-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "programming-learning-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				451762272CEC8EF700CE2574 /* OpenAPIRuntime in Frameworks */,
+				450589EA2CF9695C0044FBA4 /* API in Frameworks */,
 				4517622A2CEC8F1300CE2574 /* OpenAPIURLSession in Frameworks */,
 				451762122CEC8AF100CE2574 /* ComposableArchitecture in Frameworks */,
 			);
@@ -83,6 +86,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		450589E52CF9689D0044FBA4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		451762192CEC8B5600CE2574 /* Reducer */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,19 +118,14 @@
 			path = TCA;
 			sourceTree = "<group>";
 		};
-		4517621F2CEC8CF600CE2574 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		45E84ADA2C7968B000199146 = {
 			isa = PBXGroup;
 			children = (
+				450589E82CF969470044FBA4 /* Package */,
 				45E84AE52C7968B000199146 /* programming-learning-ios */,
 				45E84AF82C7968B200199146 /* programming-learning-iosTests */,
 				45E84B022C7968B200199146 /* programming-learning-iosUITests */,
+				450589E52CF9689D0044FBA4 /* Frameworks */,
 				45E84AE42C7968B000199146 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -139,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				4517621C2CEC8B5600CE2574 /* TCA */,
-				4517621F2CEC8CF600CE2574 /* API */,
 				45E84AE62C7968B000199146 /* programming_learning_iosApp.swift */,
 				45E84AE82C7968B000199146 /* ContentView.swift */,
 				45E84AEA2C7968B000199146 /* Item.swift */,
@@ -681,6 +685,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		450589E92CF9695C0044FBA4 /* API */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = API;
+		};
 		451762112CEC8AF100CE2574 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 451762102CEC8AF100CE2574 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
