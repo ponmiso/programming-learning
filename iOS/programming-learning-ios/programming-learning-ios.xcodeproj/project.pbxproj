@@ -10,6 +10,8 @@
 		451762122CEC8AF100CE2574 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 451762112CEC8AF100CE2574 /* ComposableArchitecture */; };
 		4517621D2CEC8B5600CE2574 /* GitHubReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451762182CEC8B5600CE2574 /* GitHubReducer.swift */; };
 		4517621E2CEC8B5600CE2574 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517621A2CEC8B5600CE2574 /* TopView.swift */; };
+		451762272CEC8EF700CE2574 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 451762262CEC8EF700CE2574 /* OpenAPIRuntime */; };
+		4517622A2CEC8F1300CE2574 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 451762292CEC8F1300CE2574 /* OpenAPIURLSession */; };
 		45E84AE72C7968B000199146 /* programming_learning_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AE62C7968B000199146 /* programming_learning_iosApp.swift */; };
 		45E84AE92C7968B000199146 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AE82C7968B000199146 /* ContentView.swift */; };
 		45E84AEB2C7968B000199146 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AEA2C7968B000199146 /* Item.swift */; };
@@ -58,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				451762272CEC8EF700CE2574 /* OpenAPIRuntime in Frameworks */,
+				4517622A2CEC8F1300CE2574 /* OpenAPIURLSession in Frameworks */,
 				451762122CEC8AF100CE2574 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +108,13 @@
 			path = TCA;
 			sourceTree = "<group>";
 		};
+		4517621F2CEC8CF600CE2574 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		45E84ADA2C7968B000199146 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				4517621C2CEC8B5600CE2574 /* TCA */,
+				4517621F2CEC8CF600CE2574 /* API */,
 				45E84AE62C7968B000199146 /* programming_learning_iosApp.swift */,
 				45E84AE82C7968B000199146 /* ContentView.swift */,
 				45E84AEA2C7968B000199146 /* Item.swift */,
@@ -252,6 +264,9 @@
 			mainGroup = 45E84ADA2C7968B000199146;
 			packageReferences = (
 				451762102CEC8AF100CE2574 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				451762252CEC8EF700CE2574 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
+				451762282CEC8F1300CE2574 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+				450589DE2CF965930044FBA4 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
 			);
 			productRefGroup = 45E84AE42C7968B000199146 /* Products */;
 			projectDirPath = "";
@@ -631,12 +646,36 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		450589DE2CF965930044FBA4 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 		451762102CEC8AF100CE2574 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.16.1;
+			};
+		};
+		451762252CEC8EF700CE2574 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-runtime";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.0;
+			};
+		};
+		451762282CEC8F1300CE2574 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-urlsession";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -646,6 +685,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 451762102CEC8AF100CE2574 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		451762262CEC8EF700CE2574 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 451762252CEC8EF700CE2574 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		451762292CEC8F1300CE2574 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 451762282CEC8F1300CE2574 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
