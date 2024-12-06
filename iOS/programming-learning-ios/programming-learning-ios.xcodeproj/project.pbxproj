@@ -3,27 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		450589EA2CF9695C0044FBA4 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 450589E92CF9695C0044FBA4 /* API */; };
 		451762122CEC8AF100CE2574 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 451762112CEC8AF100CE2574 /* ComposableArchitecture */; };
-		4517621D2CEC8B5600CE2574 /* GitHubReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451762182CEC8B5600CE2574 /* GitHubReducer.swift */; };
-		4517621E2CEC8B5600CE2574 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517621A2CEC8B5600CE2574 /* TopView.swift */; };
 		451762272CEC8EF700CE2574 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 451762262CEC8EF700CE2574 /* OpenAPIRuntime */; };
 		4517622A2CEC8F1300CE2574 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 451762292CEC8F1300CE2574 /* OpenAPIURLSession */; };
-		45CB8F5D2D02B22C0008E620 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 45CB8F5A2D02B22C0008E620 /* openapi.yaml */; };
-		45CB8F5E2D02B22C0008E620 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 45CB8F5B2D02B22C0008E620 /* openapi-generator-config.yaml */; };
-		45CB8F612D02B2440008E620 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB8F602D02B2410008E620 /* API.swift */; };
-		45E84AE72C7968B000199146 /* programming_learning_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AE62C7968B000199146 /* programming_learning_iosApp.swift */; };
-		45E84AE92C7968B000199146 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AE82C7968B000199146 /* ContentView.swift */; };
-		45E84AEB2C7968B000199146 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AEA2C7968B000199146 /* Item.swift */; };
-		45E84AED2C7968B200199146 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E84AEC2C7968B200199146 /* Assets.xcassets */; };
-		45E84AF02C7968B200199146 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45E84AEF2C7968B200199146 /* Preview Assets.xcassets */; };
-		45E84AFA2C7968B200199146 /* programming_learning_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AF92C7968B200199146 /* programming_learning_iosTests.swift */; };
-		45E84B042C7968B200199146 /* programming_learning_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84B032C7968B200199146 /* programming_learning_iosUITests.swift */; };
-		45E84B062C7968B200199146 /* programming_learning_iosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84B052C7968B200199146 /* programming_learning_iosUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,23 +32,16 @@
 
 /* Begin PBXFileReference section */
 		450589E82CF969470044FBA4 /* Package */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Package; sourceTree = "<group>"; };
-		451762182CEC8B5600CE2574 /* GitHubReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReducer.swift; sourceTree = "<group>"; };
-		4517621A2CEC8B5600CE2574 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
-		45CB8F5A2D02B22C0008E620 /* openapi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
-		45CB8F5B2D02B22C0008E620 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
-		45CB8F602D02B2410008E620 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		45E84AE32C7968B000199146 /* programming-learning-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "programming-learning-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		45E84AE62C7968B000199146 /* programming_learning_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programming_learning_iosApp.swift; sourceTree = "<group>"; };
-		45E84AE82C7968B000199146 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		45E84AEA2C7968B000199146 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		45E84AEC2C7968B200199146 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		45E84AEF2C7968B200199146 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		45E84AF52C7968B200199146 /* programming-learning-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "programming-learning-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		45E84AF92C7968B200199146 /* programming_learning_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programming_learning_iosTests.swift; sourceTree = "<group>"; };
 		45E84AFF2C7968B200199146 /* programming-learning-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "programming-learning-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		45E84B032C7968B200199146 /* programming_learning_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programming_learning_iosUITests.swift; sourceTree = "<group>"; };
-		45E84B052C7968B200199146 /* programming_learning_iosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programming_learning_iosUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		45CB9CF12D02B6A50008E620 /* programming-learning-iosUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "programming-learning-iosUITests"; sourceTree = "<group>"; };
+		45CB9CF62D02B7500008E620 /* programming-learning-iosTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "programming-learning-iosTests"; sourceTree = "<group>"; };
+		45CB9D272D02B7770008E620 /* programming-learning-ios */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "programming-learning-ios"; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		45E84AE02C7968B000199146 /* Frameworks */ = {
@@ -99,49 +79,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		451762192CEC8B5600CE2574 /* Reducer */ = {
-			isa = PBXGroup;
-			children = (
-				451762182CEC8B5600CE2574 /* GitHubReducer.swift */,
-			);
-			path = Reducer;
-			sourceTree = "<group>";
-		};
-		4517621B2CEC8B5600CE2574 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4517621A2CEC8B5600CE2574 /* TopView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		4517621C2CEC8B5600CE2574 /* TCA */ = {
-			isa = PBXGroup;
-			children = (
-				45CB8F5C2D02B22C0008E620 /* API */,
-				451762192CEC8B5600CE2574 /* Reducer */,
-				4517621B2CEC8B5600CE2574 /* View */,
-			);
-			path = TCA;
-			sourceTree = "<group>";
-		};
-		45CB8F5C2D02B22C0008E620 /* API */ = {
-			isa = PBXGroup;
-			children = (
-				45CB8F602D02B2410008E620 /* API.swift */,
-				45CB8F5A2D02B22C0008E620 /* openapi.yaml */,
-				45CB8F5B2D02B22C0008E620 /* openapi-generator-config.yaml */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		45E84ADA2C7968B000199146 = {
 			isa = PBXGroup;
 			children = (
 				450589E82CF969470044FBA4 /* Package */,
-				45E84AE52C7968B000199146 /* programming-learning-ios */,
-				45E84AF82C7968B200199146 /* programming-learning-iosTests */,
-				45E84B022C7968B200199146 /* programming-learning-iosUITests */,
+				45CB9D272D02B7770008E620 /* programming-learning-ios */,
+				45CB9CF62D02B7500008E620 /* programming-learning-iosTests */,
+				45CB9CF12D02B6A50008E620 /* programming-learning-iosUITests */,
 				450589E52CF9689D0044FBA4 /* Frameworks */,
 				45E84AE42C7968B000199146 /* Products */,
 			);
@@ -155,44 +99,6 @@
 				45E84AFF2C7968B200199146 /* programming-learning-iosUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		45E84AE52C7968B000199146 /* programming-learning-ios */ = {
-			isa = PBXGroup;
-			children = (
-				4517621C2CEC8B5600CE2574 /* TCA */,
-				45E84AE62C7968B000199146 /* programming_learning_iosApp.swift */,
-				45E84AE82C7968B000199146 /* ContentView.swift */,
-				45E84AEA2C7968B000199146 /* Item.swift */,
-				45E84AEC2C7968B200199146 /* Assets.xcassets */,
-				45E84AEE2C7968B200199146 /* Preview Content */,
-			);
-			path = "programming-learning-ios";
-			sourceTree = "<group>";
-		};
-		45E84AEE2C7968B200199146 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				45E84AEF2C7968B200199146 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		45E84AF82C7968B200199146 /* programming-learning-iosTests */ = {
-			isa = PBXGroup;
-			children = (
-				45E84AF92C7968B200199146 /* programming_learning_iosTests.swift */,
-			);
-			path = "programming-learning-iosTests";
-			sourceTree = "<group>";
-		};
-		45E84B022C7968B200199146 /* programming-learning-iosUITests */ = {
-			isa = PBXGroup;
-			children = (
-				45E84B032C7968B200199146 /* programming_learning_iosUITests.swift */,
-				45E84B052C7968B200199146 /* programming_learning_iosUITestsLaunchTests.swift */,
-			);
-			path = "programming-learning-iosUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +116,9 @@
 			);
 			dependencies = (
 				45CB8F592D02B1F30008E620 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				45CB9D272D02B7770008E620 /* programming-learning-ios */,
 			);
 			name = "programming-learning-ios";
 			productName = "programming-learning-ios";
@@ -229,6 +138,9 @@
 			dependencies = (
 				45E84AF72C7968B200199146 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				45CB9CF62D02B7500008E620 /* programming-learning-iosTests */,
+			);
 			name = "programming-learning-iosTests";
 			productName = "programming-learning-iosTests";
 			productReference = 45E84AF52C7968B200199146 /* programming-learning-iosTests.xctest */;
@@ -246,6 +158,9 @@
 			);
 			dependencies = (
 				45E84B012C7968B200199146 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				45CB9CF12D02B6A50008E620 /* programming-learning-iosUITests */,
 			);
 			name = "programming-learning-iosUITests";
 			productName = "programming-learning-iosUITests";
@@ -306,10 +221,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45CB8F5D2D02B22C0008E620 /* openapi.yaml in Resources */,
-				45CB8F5E2D02B22C0008E620 /* openapi-generator-config.yaml in Resources */,
-				45E84AF02C7968B200199146 /* Preview Assets.xcassets in Resources */,
-				45E84AED2C7968B200199146 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,12 +245,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45E84AE92C7968B000199146 /* ContentView.swift in Sources */,
-				4517621D2CEC8B5600CE2574 /* GitHubReducer.swift in Sources */,
-				4517621E2CEC8B5600CE2574 /* TopView.swift in Sources */,
-				45E84AEB2C7968B000199146 /* Item.swift in Sources */,
-				45CB8F612D02B2440008E620 /* API.swift in Sources */,
-				45E84AE72C7968B000199146 /* programming_learning_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45E84AFA2C7968B200199146 /* programming_learning_iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,8 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45E84B062C7968B200199146 /* programming_learning_iosUITestsLaunchTests.swift in Sources */,
-				45E84B042C7968B200199146 /* programming_learning_iosUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +462,6 @@
 		45E84B0D2C7968B200199146 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -580,7 +481,6 @@
 		45E84B0E2C7968B200199146 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -600,7 +500,6 @@
 		45E84B102C7968B200199146 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2C4U6UTP2K;
@@ -618,7 +517,6 @@
 		45E84B112C7968B200199146 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2C4U6UTP2K;
