@@ -1,0 +1,89 @@
+openapi: '3.1.1'
+info:
+  title: Various APIs
+  version: 1.0.0
+servers:
+  - url: https://api.github.com
+    description: GitHub endpoint
+paths:
+  /search/repositories:
+    get:
+      operationId: searchRepositories
+      summary: リポジトリを検索する
+      tags:
+        - search
+      parameters:
+        - name: q
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total_count:
+                    type: integer
+                    description: リポジトリ数
+                  incomplete_results:
+                    type: boolean
+                    description: 検索結果が不完全か（REST API をすべてのユーザーにとって高速に保つために、個々のクエリの実行時間を制限しています。時間制限 を超えるクエリの場合、API はタイムアウト前にすでに見つかった一致を返し、incomplete_results=trueが設定される）
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/RepositoryItem'
+                required:
+                  - total_count
+                  - incomplete_results
+                  - items
+components:
+  schemas:
+    RepositoryItem:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 3081286
+        node_id:
+          type: string
+          example: 'MDEwOlJlcG9zaXRvcnkzMDgxMjg2'
+        name:
+          type: string
+          example: 'Tetris'
+        full_name:
+          type: string
+          example: 'dtrupenn/Tetris'
+        private:
+          type: boolean
+        html_url:
+          type: string
+          example: 'https://github.com/dtrupenn/Tetris'
+        description:
+          type: string
+          example: 'A C implementation of Tetris using Pennsim through LC4'
+        stargazers_count:
+          type: integer
+          example: 1
+        watchers_count:
+          type: integer
+          example: 1
+      required:
+        - id
+        - node_id
+        - name
+        - full_name
+        - private
+        - html_url
+        - description
+        - stargazers_count
+        - watchers_count
+tags:
+  - name: search
+    description: 検索用のAPI
+externalDocs:
+  description: GitHub Search API
+  url: https://docs.github.com/en/rest/search/search

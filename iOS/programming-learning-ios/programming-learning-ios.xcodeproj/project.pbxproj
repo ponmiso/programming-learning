@@ -13,6 +13,9 @@
 		4517621E2CEC8B5600CE2574 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4517621A2CEC8B5600CE2574 /* TopView.swift */; };
 		451762272CEC8EF700CE2574 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 451762262CEC8EF700CE2574 /* OpenAPIRuntime */; };
 		4517622A2CEC8F1300CE2574 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 451762292CEC8F1300CE2574 /* OpenAPIURLSession */; };
+		45CB8F5D2D02B22C0008E620 /* openapi.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 45CB8F5A2D02B22C0008E620 /* openapi.yaml */; };
+		45CB8F5E2D02B22C0008E620 /* openapi-generator-config.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 45CB8F5B2D02B22C0008E620 /* openapi-generator-config.yaml */; };
+		45CB8F612D02B2440008E620 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CB8F602D02B2410008E620 /* API.swift */; };
 		45E84AE72C7968B000199146 /* programming_learning_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AE62C7968B000199146 /* programming_learning_iosApp.swift */; };
 		45E84AE92C7968B000199146 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AE82C7968B000199146 /* ContentView.swift */; };
 		45E84AEB2C7968B000199146 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E84AEA2C7968B000199146 /* Item.swift */; };
@@ -44,6 +47,9 @@
 		450589E82CF969470044FBA4 /* Package */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Package; sourceTree = "<group>"; };
 		451762182CEC8B5600CE2574 /* GitHubReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReducer.swift; sourceTree = "<group>"; };
 		4517621A2CEC8B5600CE2574 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
+		45CB8F5A2D02B22C0008E620 /* openapi.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = openapi.yaml; sourceTree = "<group>"; };
+		45CB8F5B2D02B22C0008E620 /* openapi-generator-config.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = "openapi-generator-config.yaml"; sourceTree = "<group>"; };
+		45CB8F602D02B2410008E620 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		45E84AE32C7968B000199146 /* programming-learning-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "programming-learning-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		45E84AE62C7968B000199146 /* programming_learning_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = programming_learning_iosApp.swift; sourceTree = "<group>"; };
 		45E84AE82C7968B000199146 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,10 +118,21 @@
 		4517621C2CEC8B5600CE2574 /* TCA */ = {
 			isa = PBXGroup;
 			children = (
+				45CB8F5C2D02B22C0008E620 /* API */,
 				451762192CEC8B5600CE2574 /* Reducer */,
 				4517621B2CEC8B5600CE2574 /* View */,
 			);
 			path = TCA;
+			sourceTree = "<group>";
+		};
+		45CB8F5C2D02B22C0008E620 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				45CB8F602D02B2410008E620 /* API.swift */,
+				45CB8F5A2D02B22C0008E620 /* openapi.yaml */,
+				45CB8F5B2D02B22C0008E620 /* openapi-generator-config.yaml */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		45E84ADA2C7968B000199146 = {
@@ -192,6 +209,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				45CB8F592D02B1F30008E620 /* PBXTargetDependency */,
 			);
 			name = "programming-learning-ios";
 			productName = "programming-learning-ios";
@@ -288,6 +306,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45CB8F5D2D02B22C0008E620 /* openapi.yaml in Resources */,
+				45CB8F5E2D02B22C0008E620 /* openapi-generator-config.yaml in Resources */,
 				45E84AF02C7968B200199146 /* Preview Assets.xcassets in Resources */,
 				45E84AED2C7968B200199146 /* Assets.xcassets in Resources */,
 			);
@@ -318,6 +338,7 @@
 				4517621D2CEC8B5600CE2574 /* GitHubReducer.swift in Sources */,
 				4517621E2CEC8B5600CE2574 /* TopView.swift in Sources */,
 				45E84AEB2C7968B000199146 /* Item.swift in Sources */,
+				45CB8F612D02B2440008E620 /* API.swift in Sources */,
 				45E84AE72C7968B000199146 /* programming_learning_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +363,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		45CB8F592D02B1F30008E620 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 45CB8F582D02B1F30008E620 /* OpenAPIGenerator */;
+		};
 		45E84AF72C7968B200199146 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 45E84AE22C7968B000199146 /* programming-learning-ios */;
@@ -703,6 +728,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 451762282CEC8F1300CE2574 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
 			productName = OpenAPIURLSession;
+		};
+		45CB8F582D02B1F30008E620 /* OpenAPIGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 450589DE2CF965930044FBA4 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
+			productName = "plugin:OpenAPIGenerator";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
