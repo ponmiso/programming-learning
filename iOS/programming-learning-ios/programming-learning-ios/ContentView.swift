@@ -6,7 +6,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 NavigationLink {
-                    TopView(store: Store(initialState: GitHubReducer.State()) { GitHubReducer() } )
+                    GitHubView(store: Store(initialState: GitHubReducer.State()) { GitHubReducer() } )
                 } label: {
                     Text(verbatim: "TCA")
                 }

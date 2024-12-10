@@ -2,14 +2,22 @@ import OpenAPIRuntime
 import OpenAPIURLSession
 
 struct API {
+    let client: Client
+
     init() {
-        // TODO: とりあえずアクセスできるか確認しただけ
         guard let serverURL = try? Servers.Server1.url() else {
-            return
+            fatalError()
         }
-        let client = Client(
+        client = Client(
             serverURL: serverURL,
             transport: URLSessionTransport()
         )
+    }
+}
+
+extension API {
+    func getRepositories(searchText: String = "") async throws -> RepositoryResponse {
+        let json = try await client.searchRepositories(query: .init(q: searchText)).ok.body.json
+        return RepositoryResponse(json)
     }
 }
