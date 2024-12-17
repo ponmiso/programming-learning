@@ -5,11 +5,13 @@ struct GitHubReducer {
     @ObservableState
     struct State: Equatable {
         var searchText = "Swift"
-        var item: RepositoryResponse?
+        var item: RepositoryResponse? = nil
     }
 
     enum Action {
         case onAppear
+        case searchTextChanged(String)
+        case search
         case searchRepositoryResponse(Result<RepositoryResponse, any Error>)
     }
 
@@ -17,9 +19,19 @@ struct GitHubReducer {
 
     var body: some Reducer<State, Action> {
         Reduce { state, action in
-            state.item = nil
             switch action {
             case .onAppear:
+                return .run { [searchText = state.searchText] send in
+                  await send(
+                    .searchRepositoryResponse(Result { try await API().getRepositories(searchText: searchText) }),
+                    animation: .default
+                  )
+                }
+                .cancellable(id: CancelID.searchRepositoryRequest)
+            case let .searchTextChanged(searchText):
+                state.searchText = searchText
+                return .none
+            case .search:
                 return .run { [searchText = state.searchText] send in
                   await send(
                     .searchRepositoryResponse(Result { try await API().getRepositories(searchText: searchText) }),

@@ -2,7 +2,8 @@ import ComposableArchitecture
 import SwiftUI
 
 struct GitHubView: View {
-    let store: StoreOf<GitHubReducer>
+    @Bindable var store: StoreOf<GitHubReducer>
+    @State private var searchText = ""
 
     var body: some View {
         List {
@@ -14,6 +15,10 @@ struct GitHubView: View {
         }
         .onAppear {
             store.send(.onAppear)
+        }
+        .searchable(text: $store.searchText.sending(\.searchTextChanged))
+        .onSubmit(of: .search) {
+            store.send(.search)
         }
     }
 }
