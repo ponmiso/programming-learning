@@ -26,7 +26,7 @@ struct GitHubView: View {
 extension GitHubView {
     private func itemView(_ item: RepositoryResponse.Item) -> some View {
         NavigationLink {
-            Text("\(item.fullName) detial")
+            GitHubItemView(item: item)
         } label: {
             VStack(alignment: .leading) {
                 HStack(spacing: 0) {
