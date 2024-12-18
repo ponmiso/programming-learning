@@ -28,7 +28,20 @@ extension GitHubView {
         NavigationLink {
             Text("\(item.fullName) detial")
         } label: {
-            Text(item.fullName)
+            VStack(alignment: .leading) {
+                HStack(spacing: 0) {
+                    Text(item.name)
+                        .font(.body)
+                    Spacer()
+                    Image(systemName: "star.fill")
+                        .foregroundStyle(.yellow)
+                    Text("\(item.stargazersCount)")
+                        .font(.callout)
+                }
+                Text(item.description)
+                    .font(.caption)
+                    .lineLimit(1)
+            }
         }
     }
 }
