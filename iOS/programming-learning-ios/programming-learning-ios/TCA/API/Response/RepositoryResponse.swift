@@ -1,7 +1,7 @@
 struct RepositoryResponse: Codable, Equatable {
     let totalCount: Int
     let incompleteResults: Bool
-    let items: [Item]
+    var items: [Item]
 
     struct Item: Codable, Equatable, Identifiable {
         let id: Int

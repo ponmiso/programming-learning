@@ -39,7 +39,9 @@ struct GitHubReducer {
                   )
                 }
                 .cancellable(id: CancelID.searchRepositoryRequest)
-            case let .searchRepositoryResponse(.success(response)):
+            case let .searchRepositoryResponse(.success(_response)):
+                var response = _response
+                response.items.sort { $0.stargazersCount > $1.stargazersCount }
                 state.item = response
                 return .none
             case .searchRepositoryResponse(.failure):
