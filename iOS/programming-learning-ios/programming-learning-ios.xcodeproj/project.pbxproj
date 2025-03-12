@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		450589EA2CF9695C0044FBA4 /* API in Frameworks */ = {isa = PBXBuildFile; productRef = 450589E92CF9695C0044FBA4 /* API */; };
 		451762122CEC8AF100CE2574 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 451762112CEC8AF100CE2574 /* ComposableArchitecture */; };
 		451762272CEC8EF700CE2574 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 451762262CEC8EF700CE2574 /* OpenAPIRuntime */; };
 		4517622A2CEC8F1300CE2574 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 451762292CEC8F1300CE2574 /* OpenAPIURLSession */; };
@@ -49,7 +48,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				451762272CEC8EF700CE2574 /* OpenAPIRuntime in Frameworks */,
-				450589EA2CF9695C0044FBA4 /* API in Frameworks */,
 				4517622A2CEC8F1300CE2574 /* OpenAPIURLSession in Frameworks */,
 				451762122CEC8AF100CE2574 /* ComposableArchitecture in Frameworks */,
 			);
@@ -608,10 +606,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		450589E92CF9695C0044FBA4 /* API */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = API;
-		};
 		451762112CEC8AF100CE2574 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 451762102CEC8AF100CE2574 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
