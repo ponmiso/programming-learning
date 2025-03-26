@@ -10,8 +10,18 @@ struct SwiftDataView: View {
 
     var body: some View {
         VStack {
-            List(models) { model in
-                Text(model.name)
+            List {
+                ForEach(models) { model in
+                    Text(model.name)
+                }
+                .onMove { from, to in
+                    var orderedModels = models
+                    orderedModels.move(fromOffsets: from, toOffset: to)
+                    for (index, model) in orderedModels.enumerated() {
+                        model.sort = index
+                    }
+                    try? context.save()
+                }
             }
         }
         HStack {
