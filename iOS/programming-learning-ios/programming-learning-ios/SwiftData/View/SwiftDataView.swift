@@ -22,6 +22,12 @@ struct SwiftDataView: View {
                     }
                     try? context.save()
                 }
+                .onDelete { indexSet in
+                    indexSet.forEach { index in
+                        let model = models[index]
+                        context.delete(model)
+                    }
+                }
             }
         }
         HStack {
