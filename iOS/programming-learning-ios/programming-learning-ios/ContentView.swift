@@ -10,6 +10,12 @@ struct ContentView: View {
                 } label: {
                     Text(verbatim: "TCA")
                 }
+
+                NavigationLink {
+                    SwiftDataView()
+                } label: {
+                    Text(verbatim: "SwiftData")
+                }
             }
         }
     }
