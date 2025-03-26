@@ -4,7 +4,7 @@ import SwiftUI
 struct SwiftDataView: View {
     @Environment(\.modelContext) private var context
 
-    @Query(sort: \SwiftDataModel.created)
+    @Query(sort: \SwiftDataModel.sort)
     private var models: [SwiftDataModel]
     @State private var inputName = ""
 
@@ -18,7 +18,10 @@ struct SwiftDataView: View {
             TextField("Added Name", text: $inputName)
             Button("Add") {
                 if inputName.isEmpty { return }
-                context.insert(SwiftDataModel(name: inputName))
+
+                let sort = models.count
+                context.insert(SwiftDataModel(name: inputName, sort: sort))
+
                 $inputName.wrappedValue = ""
             }
         }
