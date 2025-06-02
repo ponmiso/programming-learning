@@ -1,6 +1,6 @@
-struct PFCViewModel {
-    let repository: PFCRepositoryProtocol
-    init(repository: PFCRepositoryProtocol) {
+struct NutrientsViewModel {
+    let repository: NutrientsRepositoryProtocol
+    init(repository: NutrientsRepositoryProtocol) {
         self.repository = repository
     }
 
