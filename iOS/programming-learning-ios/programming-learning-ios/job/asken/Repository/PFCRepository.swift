@@ -14,7 +14,7 @@ struct PFCRepository: PFCRepositoryProtocol {
     }
     
     func toCalorie(nutrients: Nutrients) -> Int {
-        let roundedCalorie = (nutrients.gram * nutrients.caloriePerGram).rounded()
+        let roundedCalorie = (nutrients.roundedGram * nutrients.caloriePerGram).rounded()
         return Int(roundedCalorie)
     }
 }

@@ -6,6 +6,13 @@ protocol Nutrients {
     var caloriePerGram: Double { get }
 }
 
+extension Nutrients {
+    /// 小数第一位 (小数第二位を四捨五入)に変換したグラム(g)
+    var roundedGram: Double {
+        (gram * 10).rounded() / 10
+    }
+}
+
 /// タンパク質
 struct Protein: Nutrients {
     let gram: Double
