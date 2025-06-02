@@ -5,6 +5,7 @@ protocol PFC {
     var caloriePerGram: Double { get }
 }
 
+/// タンパク質
 struct Protein: PFC {
     let gram: Double
     var caloriePerGram: Double {
@@ -12,6 +13,7 @@ struct Protein: PFC {
     }
 }
 
+/// 脂質
 struct Fat: PFC {
     let gram: Double
     var caloriePerGram: Double {
@@ -19,6 +21,7 @@ struct Fat: PFC {
     }
 }
 
+/// 炭水化物
 struct Carbohydrate: PFC {
     let gram: Double
     var caloriePerGram: Double {
