@@ -1,12 +1,12 @@
 import Foundation
 
 protocol PFCRepositoryProtocol {
-    func toCalorie(pfc: PFC) -> Int
+    func toCalorie(nutrients: Nutrients) -> Int
 }
 
 struct PFCRepository: PFCRepositoryProtocol {
-    func toCalorie(pfc: PFC) -> Int {
-        let roundedCalorie = (pfc.gram * pfc.caloriePerGram).rounded()
+    func toCalorie(nutrients: Nutrients) -> Int {
+        let roundedCalorie = (nutrients.gram * nutrients.caloriePerGram).rounded()
         return Int(roundedCalorie)
     }
 }

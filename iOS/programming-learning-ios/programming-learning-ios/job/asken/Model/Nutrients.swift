@@ -1,4 +1,5 @@
-protocol PFC {
+/// 栄養素
+protocol Nutrients {
     /// グラム(g)
     var gram: Double { get }
     /// 1グラム(g)あたりのカロリー(kcal)
@@ -6,7 +7,7 @@ protocol PFC {
 }
 
 /// タンパク質
-struct Protein: PFC {
+struct Protein: Nutrients {
     let gram: Double
     var caloriePerGram: Double {
         4.0
@@ -14,7 +15,7 @@ struct Protein: PFC {
 }
 
 /// 脂質
-struct Fat: PFC {
+struct Fat: Nutrients {
     let gram: Double
     var caloriePerGram: Double {
         9.0
@@ -22,7 +23,7 @@ struct Fat: PFC {
 }
 
 /// 炭水化物
-struct Carbohydrate: PFC {
+struct Carbohydrate: Nutrients {
     let gram: Double
     var caloriePerGram: Double {
         4.0
