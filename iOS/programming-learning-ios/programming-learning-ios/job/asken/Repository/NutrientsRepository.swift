@@ -14,7 +14,9 @@ struct NutrientsRepository: NutrientsRepositoryProtocol {
     }
     
     func toCalorie(nutrients: Nutrients) -> Int {
-        let roundedCalorie = (nutrients.roundedGram * nutrients.caloriePerGram).rounded()
+        // グラムは小数第二位で四捨五入する
+        let roundedGram = (nutrients.gram * 10).rounded() / 10
+        let roundedCalorie = (roundedGram * nutrients.caloriePerGram).rounded()
         return Int(roundedCalorie)
     }
 }
