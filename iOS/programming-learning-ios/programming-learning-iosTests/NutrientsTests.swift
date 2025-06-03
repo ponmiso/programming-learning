@@ -2,7 +2,7 @@ import Testing
 @testable import programming_learning_ios
 
 struct NutrientsTests {
-    /// 問題2のテスト
+    // MARK: - 問題2のテスト
     @Test func 納豆ご飯のカロリーが正しいこと() {
         let viewModel = NutrientsViewModel()
         let riceCalorie = Int(((2.5 * 4.0) + (0.3 * 9.0) + (37.1 * 4.0)).rounded())
