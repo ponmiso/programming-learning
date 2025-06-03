@@ -1,11 +1,6 @@
 import Foundation
 
-protocol NutrientsRepositoryProtocol {
-    func toCalorie(foodNutrients: FoodNutrients) -> Int
-    func toCalorie(nutrients: Nutrients) -> Int
-}
-
-struct NutrientsRepository: NutrientsRepositoryProtocol {
+struct NutrientsManager {
     func toCalorie(foodNutrients: FoodNutrients) -> Int {
         let proteinCalorie = toCalorie(nutrients: foodNutrients.protein)
         let fatCalorie = toCalorie(nutrients: foodNutrients.fat)
