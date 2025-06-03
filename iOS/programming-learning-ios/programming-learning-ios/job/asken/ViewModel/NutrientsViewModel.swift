@@ -9,16 +9,16 @@ struct NutrientsViewModel {
     }
     
     var riceCalorie: Int {
-        let rice = Ingredients(protein: Protein(gram: 2.5),
-                               fat: Fat(gram: 0.3),
-                               carbohydrate: Carbohydrate(gram: 37.1))
-        return repository.toCalorie(ingredients: rice)
+        let rice = FoodNutrients(protein: Protein(gram: 2.5),
+                                 fat: Fat(gram: 0.3),
+                                 carbohydrate: Carbohydrate(gram: 37.1))
+        return repository.toCalorie(foodNutrients: rice)
     }
     
     var nattoCalorie: Int {
-        let natto = Ingredients(protein: Protein(gram: 16.5),
-                                fat: Fat(gram: 10.0),
-                                carbohydrate: Carbohydrate(gram: 12.1))
-        return repository.toCalorie(ingredients: natto)
+        let natto = FoodNutrients(protein: Protein(gram: 16.5),
+                                  fat: Fat(gram: 10.0),
+                                  carbohydrate: Carbohydrate(gram: 12.1))
+        return repository.toCalorie(foodNutrients: natto)
     }
 }
