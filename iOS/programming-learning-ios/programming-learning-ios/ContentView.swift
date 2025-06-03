@@ -16,6 +16,12 @@ struct ContentView: View {
                 } label: {
                     Text(verbatim: "SwiftData")
                 }
+
+                NavigationLink {
+                    NutrientsView()
+                } label: {
+                    Text(verbatim: "Nutrients")
+                }
             }
         }
     }
