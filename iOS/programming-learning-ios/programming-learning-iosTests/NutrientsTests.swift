@@ -5,15 +5,17 @@ struct NutrientsTests {
     // MARK: - 問題1のテスト
     
     /// 各栄養素のグラムと総カロリーの計算結果のリスト
-    /// - 異常値：「-1」
-    /// - 同値分割：「0」「1」「10.1」
-    /// - 四捨五入するとグラム数が変わる値：「10.44」「10.45」
+    ///
+    /// - 同値分割として、0（カロリー計算しても0になる）・1（整数）・10.1（小数）をチェックしている
+    /// - 異常値としてマイナスの値（-1）をチェックしている
+    /// - グラム数は小数点第二位で四捨五入するので、10.44・10.45をチェックしている
+    /// - カロリーは小数点第一位で四捨五入し整数となるため、プロテインの10.1と10.44でそれぞれ切り捨てと切り上げをチェックしている
     private static let nutrientsList: [(nutrients: Nutrients, result: Int)] = [
         (Protein(gram: -1), 0),
         (Protein(gram: 0), 0),
         (Protein(gram: 1), 4),
-        (Protein(gram: 10.1), 40), // カロリーが四捨五入で切り捨てられる
-        (Protein(gram: 10.44), 42), // カロリーが四捨五入で切り上げられる
+        (Protein(gram: 10.1), 40),
+        (Protein(gram: 10.44), 42),
         (Protein(gram: 10.45), 42),
         (Fat(gram: -1), 0),
         (Fat(gram: 0), 0),
@@ -41,7 +43,8 @@ struct NutrientsTests {
         let riceCalorie = Int(((2.5 * 4.0) + (0.3 * 9.0) + (37.1 * 4.0)).rounded())
         let nattoCalorie = Int(((16.5 * 4.0) + (10.0 * 9.0) + (12.1 * 4.0)).rounded())
         
-        // 納豆ご飯の総カロリーと、納豆・白米それぞれの総カロリーが正しいかを確認
+        // 納豆ご飯の総カロリーだけだと、納豆と白米の総カロリーがそれぞれ間違っている可能性があるため
+        // 納豆・白米それぞれの総カロリーもチェックする
         #expect(viewModel.nattoRiceCalorie == riceCalorie + nattoCalorie)
         #expect(viewModel.riceCalorie == riceCalorie)
         #expect(viewModel.nattoCalorie == nattoCalorie)
