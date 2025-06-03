@@ -10,7 +10,7 @@ struct NutrientsManager {
     
     func toCalorie(nutrients: Nutrients) -> Int {
         // 異常値の場合は0を返す
-        if nutrients.gram < 0 {
+        if nutrients.gram < 0 || nutrients.gram.isFinite == false {
             return 0
         }
         // グラムは小数第二位で四捨五入する
