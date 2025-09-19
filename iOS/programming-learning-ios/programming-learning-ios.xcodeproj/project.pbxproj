@@ -10,6 +10,7 @@
 		451762122CEC8AF100CE2574 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 451762112CEC8AF100CE2574 /* ComposableArchitecture */; };
 		451762272CEC8EF700CE2574 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 451762262CEC8EF700CE2574 /* OpenAPIRuntime */; };
 		4517622A2CEC8F1300CE2574 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = 451762292CEC8F1300CE2574 /* OpenAPIURLSession */; };
+		8448CFDC2E7D43D9006D3023 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 8448CFDB2E7D43D9006D3023 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 			files = (
 				451762272CEC8EF700CE2574 /* OpenAPIRuntime in Frameworks */,
 				4517622A2CEC8F1300CE2574 /* OpenAPIURLSession in Frameworks */,
+				8448CFDC2E7D43D9006D3023 /* RxSwift in Frameworks */,
 				451762122CEC8AF100CE2574 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,6 +204,7 @@
 				451762252CEC8EF700CE2574 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
 				451762282CEC8F1300CE2574 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
 				450589DE2CF965930044FBA4 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
+				8448CFDA2E7D43D9006D3023 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 45E84AE42C7968B000199146 /* Products */;
 			projectDirPath = "";
@@ -601,6 +604,14 @@
 				minimumVersion = 1.0.2;
 			};
 		};
+		8448CFDA2E7D43D9006D3023 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -623,6 +634,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 450589DE2CF965930044FBA4 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
 			productName = "plugin:OpenAPIGenerator";
+		};
+		8448CFDB2E7D43D9006D3023 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8448CFDA2E7D43D9006D3023 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,5 +1,5 @@
 {
-  "originHash" : "730a024b65fa15a888a16aea06d3fb6a82aeb890ef9c0745d802343cd50e5b85",
+  "originHash" : "9e5964c2e27996bb643e73f82140ce4e19263091715abb5162eb44337edd15c1",
   "pins" : [
     {
       "identity" : "combine-schedulers",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "65d3bd28ad1f9497bfd4011fc2cac4acb49805b2",
         "version" : "3.7.1"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "5dd1907d64f0d36f158f61a466bab75067224893",
+        "version" : "6.9.0"
       }
     },
     {
