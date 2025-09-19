@@ -13,7 +13,7 @@ struct RxSwiftContentView: View {
             }
         }
         .searchable(text: $viewModel.searchText)
-        .task { await viewModel.task() }
+        .onAppear { viewModel.onAppear() }
         .onSubmit(of: .search) { viewModel.onSubmitSearch() }
     }
 }

@@ -26,7 +26,7 @@ final class RxSwiftContentViewModel: ObservableObject {
 }
 
 extension RxSwiftContentViewModel {
-    func task() async {
+    func onAppear() {
         fetchRepositories()
     }
 
