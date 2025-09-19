@@ -78,7 +78,6 @@ components:
         - full_name
         - private
         - html_url
-        - description
         - stargazers_count
         - watchers_count
 tags:

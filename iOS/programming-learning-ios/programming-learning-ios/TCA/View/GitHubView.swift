@@ -38,7 +38,7 @@ extension GitHubView {
                     Text("\(item.stargazersCount)")
                         .font(.callout)
                 }
-                Text(item.description)
+                Text(item.description ?? "")
                     .font(.caption)
                     .lineLimit(1)
             }

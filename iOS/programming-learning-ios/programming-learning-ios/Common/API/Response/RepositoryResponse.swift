@@ -10,7 +10,7 @@ struct RepositoryResponse: Codable, Equatable {
         let fullName: String
         let `private`: Bool
         let htmlUrl: String
-        let description: String
+        let description: String?
         let stargazersCount: Int
         let watchersCount: Int
     }
