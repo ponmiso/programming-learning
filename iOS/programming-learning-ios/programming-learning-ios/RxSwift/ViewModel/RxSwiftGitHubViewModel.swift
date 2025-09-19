@@ -8,12 +8,24 @@ final class RxSwiftGitHubViewModel: ObservableObject {
 
 extension RxSwiftGitHubViewModel {
     func task() async {
-        do {
-            let response = try await API().getRepositories(searchText: searchText)
-            let sortedItems = response.items.sorted(by: { $0.stargazersCount > $1.stargazersCount })
-            items = sortedItems
-        } catch {
-            print("getRepositories error: ", error)
+        fetchRepositories()
+    }
+
+    func onSubmitSearch() {
+        fetchRepositories()
+    }
+}
+
+extension RxSwiftGitHubViewModel {
+    private func fetchRepositories() {
+        Task {
+            do {
+                let response = try await API().getRepositories(searchText: searchText)
+                let sortedItems = response.items.sorted(by: { $0.stargazersCount > $1.stargazersCount })
+                items = sortedItems
+            } catch {
+                print("getRepositories error: ", error)
+            }
         }
     }
 }

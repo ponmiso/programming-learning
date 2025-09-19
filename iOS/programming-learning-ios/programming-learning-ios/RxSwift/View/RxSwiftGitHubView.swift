@@ -14,6 +14,7 @@ struct RxSwiftGitHubView: View {
         }
         .searchable(text: $viewModel.searchText)
         .task { await viewModel.task() }
+        .onSubmit(of: .search) { viewModel.onSubmitSearch() }
     }
 }
 
