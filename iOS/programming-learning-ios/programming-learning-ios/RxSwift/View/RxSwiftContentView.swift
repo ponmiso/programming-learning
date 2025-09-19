@@ -1,8 +1,8 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct RxSwiftGitHubView: View {
-    @StateObject private var viewModel = RxSwiftGitHubViewModel()
+struct RxSwiftContentView: View {
+    @StateObject private var viewModel = RxSwiftContentViewModel()
 
     var body: some View {
         List {
@@ -18,7 +18,7 @@ struct RxSwiftGitHubView: View {
     }
 }
 
-extension RxSwiftGitHubView {
+extension RxSwiftContentView {
     private func itemView(_ item: RepositoryResponse.Item) -> some View {
         NavigationLink {
             Text(verbatim: "\(item.fullName) detial")
@@ -43,6 +43,6 @@ extension RxSwiftGitHubView {
 
 #Preview {
     NavigationStack {
-        RxSwiftGitHubView()
+        RxSwiftContentView()
     }
 }

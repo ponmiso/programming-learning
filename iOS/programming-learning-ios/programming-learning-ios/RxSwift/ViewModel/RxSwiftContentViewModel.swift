@@ -1,12 +1,12 @@
 import SwiftUI
 
 @MainActor
-final class RxSwiftGitHubViewModel: ObservableObject {
+final class RxSwiftContentViewModel: ObservableObject {
     @Published var searchText = "Swift"
     @Published var items = [RepositoryResponse.Item]()
 }
 
-extension RxSwiftGitHubViewModel {
+extension RxSwiftContentViewModel {
     func task() async {
         fetchRepositories()
     }
@@ -16,7 +16,7 @@ extension RxSwiftGitHubViewModel {
     }
 }
 
-extension RxSwiftGitHubViewModel {
+extension RxSwiftContentViewModel {
     private func fetchRepositories() {
         Task {
             do {
