@@ -19,7 +19,7 @@ struct RxSwiftContentView: View {
 }
 
 extension RxSwiftContentView {
-    private func itemView(_ item: RepositoryResponse.Item) -> some View {
+    private func itemView(_ item: RxSwiftContentItemData) -> some View {
         NavigationLink {
             Text(verbatim: "\(item.fullName) detial")
         } label: {
@@ -33,7 +33,7 @@ extension RxSwiftContentView {
                     Text("\(item.stargazersCount)")
                         .font(.callout)
                 }
-                Text(item.description ?? "")
+                Text(item.description)
                     .font(.caption)
                     .lineLimit(1)
             }
