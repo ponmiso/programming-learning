@@ -22,6 +22,12 @@ struct ContentView: View {
                 } label: {
                     Text(verbatim: "Nutrients")
                 }
+
+                NavigationLink {
+                    RxSwiftContentView()
+                } label: {
+                    Text(verbatim: "RxSwift")
+                }
             }
         }
     }
