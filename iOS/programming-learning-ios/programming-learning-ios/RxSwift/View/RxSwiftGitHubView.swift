@@ -2,25 +2,25 @@ import ComposableArchitecture
 import SwiftUI
 
 struct RxSwiftGitHubView: View {
-    @State private var items = [RepositoryResponse.Item]()
-    @State private var searchText = ""
+    @StateObject private var viewModel = RxSwiftGitHubViewModel()
 
     var body: some View {
         List {
-            if !items.isEmpty {
-                ForEach(items) { item in
+            if !viewModel.items.isEmpty {
+                ForEach(viewModel.items) { item in
                     itemView(item)
                 }
             }
         }
-        .searchable(text: $searchText)
+        .searchable(text: $viewModel.searchText)
+        .task { await viewModel.task() }
     }
 }
 
 extension RxSwiftGitHubView {
     private func itemView(_ item: RepositoryResponse.Item) -> some View {
         NavigationLink {
-            Text("\(item.fullName) detial")
+            Text(verbatim: "\(item.fullName) detial")
         } label: {
             VStack(alignment: .leading) {
                 HStack(spacing: 0) {
