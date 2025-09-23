@@ -1,3 +1,4 @@
+import RxSwift
 import SwiftUI
 
 struct RxSwiftContentData {
@@ -16,6 +17,7 @@ struct RxSwiftContentItemData: Identifiable {
 @MainActor
 final class RxSwiftContentViewModel: ObservableObject {
     private let getRepositoriesUseCase: GetRepositoriesUserCaseProtocol
+    private let disposeBag = DisposeBag()
 
     @Published var searchText = "Swift"
     @Published var items = [RxSwiftContentItemData]()
@@ -37,16 +39,17 @@ extension RxSwiftContentViewModel {
 
 extension RxSwiftContentViewModel {
     private func fetchRepositories() {
-        Task {
-            do {
-                let input = GetRepositoriesInputData(searchText: searchText)
-                let output = try await getRepositoriesUseCase.execute(input: input)
-                items = output.items.map {
-                    RxSwiftContentItemData(id: $0.id, name: $0.name, fullName: $0.fullName, description: $0.description, stargazersCount: $0.stargazersCount)
+        let input = GetRepositoriesInputData(searchText: searchText)
+        getRepositoriesUseCase.executeRx(input: input)
+            .subscribe(
+                onSuccess: { [weak self] output in
+                    self?.items = output.items.map {
+                        RxSwiftContentItemData(id: $0.id, name: $0.name, fullName: $0.fullName, description: $0.description, stargazersCount: $0.stargazersCount)
+                    }
+                }, onFailure: { error in
+                    print("getRepositories error: ", error)
                 }
-            } catch {
-                print("getRepositories error: ", error)
-            }
-        }
+            )
+            .disposed(by: disposeBag)
     }
 }

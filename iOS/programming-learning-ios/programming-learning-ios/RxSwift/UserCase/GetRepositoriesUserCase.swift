@@ -1,6 +1,9 @@
+import RxSwift
+
 @MainActor
 protocol GetRepositoriesUserCaseProtocol {
     func execute(input: GetRepositoriesInputData) async throws -> GetRepositoriesOuptPutData
+    func executeRx(input: GetRepositoriesInputData) -> Single<GetRepositoriesOuptPutData>
 }
 
 struct GetRepositoriesInputData {
@@ -43,5 +46,27 @@ struct GetRepositoriesUserCase: GetRepositoriesUserCaseProtocol {
                 )
             }
         return GetRepositoriesOuptPutData(totalCount: response.totalCount, items: items)
+    }
+
+    func executeRx(input: GetRepositoriesInputData) -> Single<GetRepositoriesOuptPutData> {
+        API().getRepositoriesRx(searchText: input.searchText)
+            .map {
+                let sortedItems = $0.items
+                    .sorted(by: { $0.stargazersCount > $1.stargazersCount })
+                    .map {
+                        GetRepositoriesItemOuptPutData(
+                            id: $0.id,
+                            nodeId: $0.nodeId,
+                            name: $0.name,
+                            fullName: $0.fullName,
+                            private: $0.private,
+                            htmlUrl: $0.htmlUrl,
+                            description: $0.description ?? "",
+                            stargazersCount: $0.stargazersCount,
+                            watchersCount: $0.watchersCount
+                        )
+                    }
+                return GetRepositoriesOuptPutData(totalCount: $0.totalCount, items: sortedItems)
+            }
     }
 }
